@@ -1,0 +1,4 @@
+R5T.NetStandard.IO.Types.Construction - A construction console entry-point for the R5T.NetStandard.IO.Types library (Basic types library for IO.).
+
+Goals
+

@@ -1,0 +1,4 @@
+R5T.NetStandard.IO.Types - Basic types library for IO.
+
+Goals
+
