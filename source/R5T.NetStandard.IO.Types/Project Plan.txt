@@ -2,3 +2,6 @@ R5T.NetStandard.IO.Types - Basic types library for IO.
 
 Goals
 
+Design
+
+Thought was given to whether the stream-helper classes should be in the System.IO namespace. This means one fewer using statements in each file (and thus less code), but instead classes were put in the R5T.NetStandard.IO namespace to emphasize that they are different from the System.IO functionality.
