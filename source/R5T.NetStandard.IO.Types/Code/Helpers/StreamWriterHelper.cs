@@ -18,8 +18,21 @@ namespace R5T.NetStandard.IO
         /// </summary>
         public static StreamWriter NewLeaveOpen(Stream stream)
         {
-            // Note new UTF8Encoding(false), instead of Encoding.UTF8, to prevent random byte-order-marks (BOM) marks. This was a big problem in writing to memory streams since the odd-number of BOM bytes (3) would be placed in the middle of the memory stream!
+            // Note new UTF8Encoding(false), instead of Encoding.UTF8, to prevent random byte-order-marks (BOM) marks. This was a big problem in writing to existing memory streams since the odd-number of BOM bytes (3) would be placed where writing started, in the middle of the memory stream!
             var output = new StreamWriter(stream, new UTF8Encoding(false), StreamReaderHelper.DefaultBufferSize, true);
+            return output;
+        }
+
+        /// <summary>
+        /// The <see cref="StreamWriter"/> class has a constructor that helpfully leaves the underlying stream open after writing. However, this constructor puts the argument to leave the underlying stream open at the end of the input arguments list, behind lots of values crazy random values.
+        /// This method produces a <see cref="StreamWriter"/> that will leave the underlying stream open with the ease of the default constructor.
+        /// 
+        /// Note: Returned writer produces byte-order-marks (BOM).
+        /// </summary>
+        public static StreamWriter NewLeaveOpenAddBOM(Stream stream)
+        {
+            // Note new UTF8Encoding(false), instead of Encoding.UTF8, to prevent random byte-order-marks (BOM) marks. This was a big problem in writing to existing memory streams since the odd-number of BOM bytes (3) would be placed where writing started, in the middle of the memory stream!
+            var output = new StreamWriter(stream, Encoding.UTF8, StreamReaderHelper.DefaultBufferSize, true);
             return output;
         }
 
