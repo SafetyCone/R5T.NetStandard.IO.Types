@@ -8,10 +8,8 @@ namespace R5T.NetStandard.IO
     {
         public static bool ReadLineIsEnd(this StringReader stringReader, out string line)
         {
-            line = stringReader.ReadLine();
-
-            var isEnd = line == StringReaderHelper.EndOfString;
-            return isEnd;
+            var output = StringReaderHelper.ReadLine(stringReader, out line);
+            return output;
         }
     }
 }
