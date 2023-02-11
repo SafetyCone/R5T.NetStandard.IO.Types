@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
-MinimumVisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.NetStandard.IO.Types.Construction", "R5T.NetStandard.IO.Types.Construction\R5T.NetStandard.IO.Types.Construction.csproj", "{35AAD092-5726-4679-86E5-392E7DB7F057}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.NetStandard.IO.Types", "R5T.NetStandard.IO.Types\R5T.NetStandard.IO.Types.csproj", "{814246DC-D30C-4FEC-81BE-EE0BEADBFCD1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Dependencies", "_Dependencies", "{AFC0B655-4F95-4FED-8232-E3883A6BE892}"
+EndProject
 Global
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -15,9 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{35AAD092-5726-4679-86E5-392E7DB7F057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,5 +45,8 @@ Global
 		{814246DC-D30C-4FEC-81BE-EE0BEADBFCD1}.Release|x64.Build.0 = Release|Any CPU
 		{814246DC-D30C-4FEC-81BE-EE0BEADBFCD1}.Release|x86.ActiveCfg = Release|Any CPU
 		{814246DC-D30C-4FEC-81BE-EE0BEADBFCD1}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
